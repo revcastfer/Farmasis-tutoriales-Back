@@ -10,7 +10,7 @@ const upload = multer({ storage:storage,dest: './src/videos' })
 
 
 
-const {tutorialsHandler,postTutorials,getVideo}=require ("/app/src/handlers/tutorialsHandler.js")
+const {tutorialsHandler,postTutorials,getVideo}=require ("./src/handlers/tutorialsHandler.js")
 
 
 
