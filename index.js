@@ -22,7 +22,7 @@ const { conn,cargaData } = require('./src/db.js');
 const port=process.env.PORT || 3002;
 
 // Syncing all the models at once.
-conn.sync()
+conn.sync({force:true})
 .then(() => {
   server.listen(port, () => {
     console.log(`%s listening at ${port}`); // eslint-disable-line no-console
