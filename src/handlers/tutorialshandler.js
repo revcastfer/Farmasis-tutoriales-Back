@@ -17,6 +17,8 @@ let postTutorials=async(req,res)=>{
 const {nombre,descripcion,categoria}=req.body;
 const video = req.file.filename;
 
+if (categoria.length===1){categoria=Number(categoria)}
+
 
 try{
 	let rpta=await controllerPost(nombre,descripcion,categoria,video);
