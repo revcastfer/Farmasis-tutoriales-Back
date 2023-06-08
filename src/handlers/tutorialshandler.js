@@ -14,10 +14,10 @@ catch (error){ res.status(501).send(error)}
 
 let postTutorials=async(req,res)=>{
   
-const {nombre,descripcion,categoria}=req.body;
+let {nombre,descripcion,categoria}=req.body;
 const video = req.file.filename;
 
-if (categoria.length===1){categoria=Number(categoria)}
+if (categoria.length===1){categoria=Number(categoria)};
 
 
 try{
