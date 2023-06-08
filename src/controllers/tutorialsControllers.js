@@ -40,7 +40,7 @@ let controllerPost=async(nombre,descripcion,categoria,video)=>{
 let allCategorias=await Category.findAll();
 
 
-if (typeof Category == Number){ 
+if (typeof Category === "number"){ 
 
 try{
 const tutorial = await Tutorial.create({name:nombre,descrip:descripcion,video:"/videos/"+Date.now()+video,CategoryId:categoria});
