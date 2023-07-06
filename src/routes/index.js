@@ -9,6 +9,7 @@ const server =require( '../app.js' );
 const tutorialsRouter=require("./tutorialsRouter.js")
 const referidosRouter=require("./referidosRouter.js")
 const categoriaRouter=require("./categoriaRouter.js")
+const loginRouter=require("./loginRouter.js")
 
 const router = Router();
 // Configurar los routers
@@ -19,6 +20,6 @@ router.use('/videos',tutorialsRouter) ;
 
 router.use("/referidos",referidosRouter);
 router.use("/categorias",categoriaRouter);
-
+router.use("/login",loginRouter);
 
 module.exports = router;

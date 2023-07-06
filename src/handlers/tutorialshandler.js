@@ -8,7 +8,7 @@ let respuesta=await getTutorials();
 res.status(200).json(respuesta)
 
 }
-catch (error){ res.status(501).send(error)}
+catch (error){ res.status(501).send(error.message)}
 
 };
 
@@ -25,7 +25,7 @@ try{
 
 res.status(200).json(rpta)
 }
-catch(error){ res.status(501).json({msg:error})}
+catch(error){ res.status(501).json(error.message)}
 
 };
 
