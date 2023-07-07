@@ -60,40 +60,40 @@ cargaData=()=>{
   const cortos = Category.create( {descrip:"cortos"} );
 
  
- // const adminDeUsuarios=Tutorial.create({name:"1.-Administracion de Usuarios" , descrip:"en este video comprenderemos como crear distintos usuarios y aplicar las politicas necesarias dependiendo de su funcion en la empresa" ,
- //                                  video:"/videos/Administracion De Usuarios.m4v", CategoryId:1 });
- // const precios=Tutorial.create({name:"2.-Precios" , descrip:"colocaremos los distints precios cada producto" ,
- //                                  video:"/videos/Precios Tutorial.m4v", CategoryId:1 });
- // const productos=Tutorial.create({name:"3.-Creacion de producto" , descrip:"aprenderemos como crear productos,verificando el factor y añadiendo correctamente la descripcion" ,
- //                                  video:"/videos/Creacion De Producto Tutorial.m4v", CategoryId:1 });
- // const otrosIngresos=Tutorial.create({name:"4.-Otros ingresos y Otras salidas" , descrip:"sumar o restar cajas o unidades al stock q ya tenemos, de manera rapida y sin muchos requisistos" ,
- //                                  video:"/videos/Otros Ingresos Y Otras Salidas.m4v", CategoryId:1 });
- // const transferencias=Tutorial.create({name:"5.-Transferencia entre sucursales" , descrip:"enviar y recibir mercaderia entre las distintas sucursales" ,
- //                                  video:"/videos/Transferencias.m4v", CategoryId:1 });
- // const prepedidos=Tutorial.create({name:"5.1.-Pre-pedidos" , descrip:"generar peticiones para reposicíon de mercaderia" ,
- //                                  video:"/videos/Prepedidos.m4v", CategoryId:1 });
- // const ventas=Tutorial.create({name:"6.-venta de productos" , descrip:"realizar ventas con el sistema farmasis" ,
- //                                  video:"/videos/Ventas Tutorial.m4v", CategoryId:1 });
- // const sunat=Tutorial.create({name:"7.-Envios a SUNAT" , descrip:"como comunicar manualmente sus comprobantes a sunat" ,
- //                                  video:"/videos/Sunat Tutorial.m4v", CategoryId:1 });
- // const Guias=Tutorial.create({name:"7.1.-Guias Electronicas" , descrip:"realizar el envio de guias electronicas" ,
- //                                  video:"/videos/Guias Electronicas.m4v", CategoryId:1 });
- // const compras=Tutorial.create({name:"8.-ingreso de compras por factura" , descrip:"ingresar su factura de compras al sistema" ,
- //                                  video:"/videos/compras.m4v", CategoryId:1 });
- // const vencimiento=Tutorial.create({name:"8.1.-definicion de fechas de vencimiento" , descrip:"entender el manejo de las fechas por parde de nuestro sistema" ,
- //                                  video:"/videos/DEf. Fechas De Vencimiento.m4v", CategoryId:1 });
- // const digemid=Tutorial.create({name:"9.-envio de precios a la digemid" , descrip:"como realizar el envio de precios a la digemid mediante archivo excel" ,
- //                                  video:"/videos/Digemid Tutorial.m4v", CategoryId:1 });
- // const cuadre=Tutorial.create({name:"Cuadre de caja y Registro de ventas" , descrip:"poder realizar el cuadre de caja con las herramientas del sistema farmasis" ,
- //                                  video:"/videos/Cuadre De Caja Y Reg De Ventas.m4v", CategoryId:2 });
- // const servicios=Tutorial.create({name:"facturacion de servicios" , descrip:"facturar servicio como agentes, metropolitano , etc" ,
- //                                  video:"/videos/servicios.mp4", CategoryId:2 });
- // const incentivos=Tutorial.create({name:"Incentivos" , descrip:"logre q su personal venda dterminados productos brindandoles un incentivo monetario" ,
- //                                  video:"/videos/Incentivos Tutorial.m4v", CategoryId:2 });
- // const inventario=Tutorial.create({name:"Inventario" , descrip:"verificar y corregir el stock de cada uno de sus productos" ,
- //                                  video:"/videos/Inventario.m4v", CategoryId:2 });
- // const receta=Tutorial.create({name:"productos controlados" , descrip:"hacer necesaria el ingreso de una receta mediac para la venta de algunos productos" ,
- //                                  video:"/videos/Receta Medica.m4v", CategoryId:2 });
+  const adminDeUsuarios=Tutorial.create({name:"1.-Administracion de Usuarios" , descrip:"en este video comprenderemos como crear distintos usuarios y aplicar las politicas necesarias dependiendo de su funcion en la empresa" ,
+                                   video:"/videos/Administracion De Usuarios.m4v", CategoryId:1 });
+  const precios=Tutorial.create({name:"2.-Precios" , descrip:"colocaremos los distints precios cada producto" ,
+                                   video:"/videos/Precios Tutorial.m4v", CategoryId:1 });
+  const productos=Tutorial.create({name:"3.-Creacion de producto" , descrip:"aprenderemos como crear productos,verificando el factor y añadiendo correctamente la descripcion" ,
+                                   video:"/videos/Creacion De Producto Tutorial.m4v", CategoryId:1 });
+  const otrosIngresos=Tutorial.create({name:"4.-Otros ingresos y Otras salidas" , descrip:"sumar o restar cajas o unidades al stock q ya tenemos, de manera rapida y sin muchos requisistos" ,
+                                   video:"/videos/Otros Ingresos Y Otras Salidas.m4v", CategoryId:1 });
+  const transferencias=Tutorial.create({name:"5.-Transferencia entre sucursales" , descrip:"enviar y recibir mercaderia entre las distintas sucursales" ,
+                                   video:"/videos/Transferencias.m4v", CategoryId:1 });
+  const prepedidos=Tutorial.create({name:"5.1.-Pre-pedidos" , descrip:"generar peticiones para reposicíon de mercaderia" ,
+                                   video:"/videos/Prepedidos.m4v", CategoryId:1 });
+  const ventas=Tutorial.create({name:"6.-venta de productos" , descrip:"realizar ventas con el sistema farmasis" ,
+                                   video:"/videos/Ventas Tutorial.m4v", CategoryId:1 });
+  const sunat=Tutorial.create({name:"7.-Envios a SUNAT" , descrip:"como comunicar manualmente sus comprobantes a sunat" ,
+                                   video:"/videos/Sunat Tutorial.m4v", CategoryId:1 });
+  const Guias=Tutorial.create({name:"7.1.-Guias Electronicas" , descrip:"realizar el envio de guias electronicas" ,
+                                   video:"/videos/Guias Electronicas.m4v", CategoryId:1 });
+  const compras=Tutorial.create({name:"8.-ingreso de compras por factura" , descrip:"ingresar su factura de compras al sistema" ,
+                                   video:"/videos/compras.m4v", CategoryId:1 });
+  const vencimiento=Tutorial.create({name:"8.1.-definicion de fechas de vencimiento" , descrip:"entender el manejo de las fechas por parde de nuestro sistema" ,
+                                   video:"/videos/DEf. Fechas De Vencimiento.m4v", CategoryId:1 });
+  const digemid=Tutorial.create({name:"9.-envio de precios a la digemid" , descrip:"como realizar el envio de precios a la digemid mediante archivo excel" ,
+                                   video:"/videos/Digemid Tutorial.m4v", CategoryId:1 });
+  const cuadre=Tutorial.create({name:"Cuadre de caja y Registro de ventas" , descrip:"poder realizar el cuadre de caja con las herramientas del sistema farmasis" ,
+                                   video:"/videos/Cuadre De Caja Y Reg De Ventas.m4v", CategoryId:2 });
+  const servicios=Tutorial.create({name:"facturacion de servicios" , descrip:"facturar servicio como agentes, metropolitano , etc" ,
+                                   video:"/videos/servicios.mp4", CategoryId:2 });
+  const incentivos=Tutorial.create({name:"Incentivos" , descrip:"logre q su personal venda dterminados productos brindandoles un incentivo monetario" ,
+                                   video:"/videos/Incentivos Tutorial.m4v", CategoryId:2 });
+  const inventario=Tutorial.create({name:"Inventario" , descrip:"verificar y corregir el stock de cada uno de sus productos" ,
+                                   video:"/videos/Inventario.m4v", CategoryId:2 });
+  const receta=Tutorial.create({name:"productos controlados" , descrip:"hacer necesaria el ingreso de una receta mediac para la venta de algunos productos" ,
+                                   video:"/videos/Receta Medica.m4v", CategoryId:2 });
 
  
 
