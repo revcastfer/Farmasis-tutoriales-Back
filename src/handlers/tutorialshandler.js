@@ -1,4 +1,4 @@
-const {getTutorials, controllerPost}=require("../controllers/tutorialsControllers.js")
+const {getTutorials, controllerPost,getById}=require("../controllers/tutorialsControllers.js")
 const path = require('path');
 
 
@@ -6,39 +6,40 @@ let tutorialsHandler=async(req,res)=>{
 try {
 let respuesta=await getTutorials();
 res.status(200).json(respuesta)
-
 }
 catch (error){ res.status(501).send(error.message)}
-
 };
 
-let postTutorials=async(req,res)=>{
-  
+
+let postTutorials=async(req,res)=>{  
 let {nombre,descripcion,categoria}=req.body;
 const video = req.file.filename;
-
-if (categoria.length===1){categoria=Number(categoria)};
-
+ if (categoria.length===1){categoria=Number(categoria)};
 
 try{
 	let rpta=await controllerPost(nombre,descripcion,categoria,video);
-
-res.status(200).json(rpta)
+    res.status(200).json(rpta)
 }
 catch(error){ res.status(501).json(error.message)}
-
 };
 
 
 let getVideo=(req,res)=>{
-
 const {name}=req.params;
-
-
-
 res.sendfile(path.join(__dirname,`../videos/${name}`) )
+};
+
+
+const tutorialById=async(req,res)=>{
+ const {id}=req.params;
+
+ try{
+ let rpta=await getById(id);
+}
+catch(err){res.status(501).json(err.message)}
+
 }
 
 
 
-module.exports={tutorialsHandler,postTutorials,getVideo}
+module.exports={tutorialsHandler,postTutorials,getVideo,tutorialById}

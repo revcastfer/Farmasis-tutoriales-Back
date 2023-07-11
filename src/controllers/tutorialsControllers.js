@@ -13,33 +13,24 @@ let allTutorials = await Tutorial.findAll({ include: Category });
 
 let data=allCategorias.map(cate=>{let descrip=cate.descrip; 
 	return{[descrip]:allTutorials.filter(tuto=>tuto.CategoryId==cate.id)
-.sort( (a,b)=>{
-
-	if(a.name[0]==b.name[0]){
-
-		if(a.name[2]==1){return 1}else return -1
-	}
-	else return a.name[0]-b.name[0]
+.sort( (a,b)=>{ if(a.name[0]==b.name[0]){if(a.name[2]==1){return 1} else return -1} else return a.name[0]-b.name[0]
+}) }});
+return data 
+};
 
 
 
-	 }) }});
 
+let getById=async(id)=>{
+const tutorial=await Tutorial.findByPk(id);
+if(tutorial.length>0){return tutorial} else throw new Error("no se encontro video")
 
-
-return data
- 
-}
+};
 
 
 let controllerPost=async(nombre,descripcion,categoria,video)=>{
 
-
-
-
 let allCategorias=await Category.findAll();
-
-
 if (typeof categoria === "number"){ 
 
 try{
@@ -49,8 +40,7 @@ catch(error){throw new Error (error)}
 }
 
 else {
-try{
-	
+try{	
 let categoriaNueva = await Category.create({descrip:categoria});
 let idCategoria=categoriaNueva.dataValues.id;
 const tutorial = await Tutorial.create({name:nombre,descrip:descripcion,video:"/videos/"+video,CategoryId:idCategoria});
@@ -58,7 +48,8 @@ return tutorial
 }
 catch(error){throw new Error (error)}
 }
+
 }
 
 
-module.exports={getTutorials,controllerPost}
+module.exports={getTutorials,controllerPost,getById}
