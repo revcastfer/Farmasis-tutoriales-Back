@@ -3,8 +3,10 @@ const path = require('path');
 
 
 let tutorialsHandler=async(req,res)=>{
+const {id}=req.query;
+
 try {
-let respuesta=await getTutorials();
+let respuesta=id?await getById(id):await getTutorials();
 res.status(200).json(respuesta)
 }
 catch (error){ res.status(501).send(error.message)}
@@ -30,16 +32,6 @@ res.sendfile(path.join(__dirname,`../videos/${name}`) )
 };
 
 
-const tutorialById=async(req,res)=>{
- const {id}=req.params;
-
- try{
- let rpta=await getById(id);
-}
-catch(err){res.status(501).json(err.message)}
-
-}
 
 
-
-module.exports={tutorialsHandler,postTutorials,getVideo,tutorialById}
+module.exports={tutorialsHandler,postTutorials,getVideo}

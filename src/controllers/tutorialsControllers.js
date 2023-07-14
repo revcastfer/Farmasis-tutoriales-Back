@@ -23,7 +23,7 @@ return data
 
 let getById=async(id)=>{
 const tutorial=await Tutorial.findByPk(id);
-if(tutorial.length>0){return tutorial} else throw new Error("no se encontro video")
+if(tutorial){return tutorial} else throw new Error("no se encontro video")
 
 };
 
